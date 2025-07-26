@@ -26,17 +26,53 @@ src
     │   └── com.example.hexagonal
     │       ├── domain
     │       │   ├── model
+    │       │   │   ├── Order.java
+    │       │   │   ├── OrderItem.java
+    │       │   │   └── Product.java
     │       │   ├── port
+    │       │   │   ├── in
+    │       │   │   │   ├── OrderUseCase.java
+    │       │   │   │   └── ProductUseCase.java
+    │       │   │   └── out
+    │       │   │       ├── OrderRepositoryPort.java
+    │       │   │       └── ProductRepositoryPort.java
     │       │   └── service
+    │       │       ├── OrderService.java
+    │       │       └── ProductService.java
     │       ├── adapter
     │       │   ├── in
-    │       │   │   └── controller
+    │       │   │   └── web
+    │       │   │       ├── dto
+    │       │   │       │   ├── OrderDTO.java
+    │       │   │       │   ├── OrderDTOMapper.java
+    │       │   │       │   ├── OrderItemDTO.java
+    │       │   │       │   ├── OrderItemDTOMapper.java
+    │       │   │       │   ├── ProductDTO.java
+    │       │   │       │   └── ProductDTOMapper.java
+    │       │   │       ├── OrderController.java
+    │       │   │       └── ProductController.java
     │       │   └── out
-    │       │       └── repository
+    │       │       └── persistence
+    │       │           ├── entity
+    │       │           │   ├── OrderEntity.java
+    │       │           │   ├── OrderItemEntity.java
+    │       │           │   └── ProductEntity.java
+    │       │           ├── mapper
+    │       │           │   ├── OrderEntityMapper.java
+    │       │           │   ├── OrderItemEntityMapper.java
+    │       │           │   └── ProductEntityMapper.java
+    │       │           ├── repository
+    │       │           │   ├── OrderJpaRepository.java
+    │       │           │   └── ProductRepository.java
+    │       │           ├── OrderRepositoryAdapter.java
+    │       │           └── ProductRepositoryAdapter.java
     │       └── config
+    │           ├── AppConfig.java
+    │           └── SpringDocConfig.java
     └── resources
-        ├── application.yml
-        └── data.sql
+        ├── application.properties
+        ├── static
+        └── templates
 ```
 
 ---
