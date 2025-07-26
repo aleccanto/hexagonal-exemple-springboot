@@ -1,0 +1,135 @@
+# 📦 Projeto Exemplo - Arquitetura Hexagonal com Spring Boot
+
+Este projeto demonstra a aplicação da **Arquitetura Hexagonal (Ports and Adapters)** utilizando o ecossistema **Spring Boot**, com um CRUD simples de usuários persistido em banco **H2**, documentação com **Swagger**, e estrutura orientada à separação de responsabilidades.
+
+---
+
+## 🧠 Conceito
+
+A **Arquitetura Hexagonal** promove o isolamento da **regra de negócio** dos detalhes de infraestrutura, facilitando testes, manutenção e evolução do sistema.
+
+### Componentes principais:
+
+- **Domínio**: Regras de negócio (modelo, casos de uso, portas).
+- **Adapters**: Interfaces com o mundo externo (REST, JPA, etc.).
+- **Ports**: Contratos de entrada e saída.
+- **Config**: Orquestração (injeção de dependência e Spring Boot).
+
+---
+
+## 🧱 Estrutura do Projeto
+
+```
+src
+└── main
+    ├── java
+    │   └── com.example.hexagonal
+    │       ├── domain
+    │       │   ├── model
+    │       │   ├── port
+    │       │   └── service
+    │       ├── adapter
+    │       │   ├── in
+    │       │   │   └── controller
+    │       │   └── out
+    │       │       └── repository
+    │       └── config
+    └── resources
+        ├── application.yml
+        └── data.sql
+```
+
+---
+
+## 💠 Tecnologias Usadas
+
+- Java 17
+- Spring Boot 3.x
+- Spring Web
+- Spring Data JPA
+- H2 Database (memória)
+- Swagger/OpenAPI (Springdoc)
+- Maven
+
+---
+
+## 🚀 Como Executar
+
+### Pré-requisitos
+
+- Java 17+
+- Maven 3.8+
+
+### Passos
+
+```bash
+# 1. Clone o repositório
+git clone https://github.com/seuusuario/hexagonal-spring-boot-example.git
+
+# 2. Acesse o diretório
+cd hexagonal-spring-boot-example
+
+# 3. Compile e execute
+mvn spring-boot:run
+```
+
+A aplicação será iniciada em:\
+📍 `http://localhost:8080`
+
+---
+
+## 📖 Documentação da API
+
+Após iniciar a aplicação, acesse:\
+👉 **Swagger UI**: [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+
+---
+
+## 📃 Banco de Dados
+
+Este projeto utiliza o **H2 em memória** para fins de teste.
+
+- Console H2: [http://localhost:8080/h2-console](http://localhost:8080/h2-console)
+- JDBC URL: `jdbc:h2:mem:hexadb`
+- Usuário: `sa`
+- Senha: *(em branco)*
+
+---
+
+## 🧪 Testes
+
+Os testes unitários focam na **camada de domínio**, desacoplados de frameworks.
+
+```bash
+mvn test
+```
+
+---
+
+## 📌 Exemplo de Caso de Uso
+
+- Porta de entrada: `CreateUserUseCase`
+- Porta de saída: `UserRepository`
+- Adaptador de entrada: `UserController`
+- Adaptador de saída: `UserRepositoryImpl`
+
+---
+
+## 📚 Referências
+
+- [Arquitetura Hexagonal - Alistair Cockburn](https://alistair.cockburn.us/hexagonal-architecture/)
+- [Spring Boot + Swagger UI](https://springdoc.org/)
+- [Spring Data JPA](https://spring.io/projects/spring-data-jpa)
+
+---
+
+## 🧑‍💻 Autor
+
+Desenvolvido por [Seu Nome](https://github.com/seuusuario) para fins educacionais.
+
+---
+
+## 📝 Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
+
