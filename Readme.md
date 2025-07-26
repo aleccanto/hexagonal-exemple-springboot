@@ -63,13 +63,8 @@ src
 ### Passos
 
 ```bash
-# 1. Clone o repositório
-git clone https://github.com/seuusuario/hexagonal-spring-boot-example.git
 
-# 2. Acesse o diretório
-cd hexagonal-spring-boot-example
-
-# 3. Compile e execute
+# Compile e execute
 mvn spring-boot:run
 ```
 
@@ -120,12 +115,6 @@ mvn test
 - [Arquitetura Hexagonal - Alistair Cockburn](https://alistair.cockburn.us/hexagonal-architecture/)
 - [Spring Boot + Swagger UI](https://springdoc.org/)
 - [Spring Data JPA](https://spring.io/projects/spring-data-jpa)
-
----
-
-## 🧑‍💻 Autor
-
-Desenvolvido por [Seu Nome](https://github.com/seuusuario) para fins educacionais.
 
 ---
 
